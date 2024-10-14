@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# dsa_hus
-=======
-# dsa
->>>>>>> 9fe63a8 (Add exercise dsa w1+2+3)
+# Here, every week I will post DSA exercises of University of Science, Hanoi National University.
