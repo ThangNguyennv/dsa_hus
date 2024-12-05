@@ -3,7 +3,22 @@ package Hw3_23001938_NguyenVanThang.exercise_three;
 import java.util.Stack;
 
 public class ValidBracket {
-    public static double isValid(String strings) {
+    public static boolean isValid(String s) {
+        Stack<Character> stack1 = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                stack1.push(c);
+            } else {
+                if (c == ')') {
+                    stack1.pop();
+                }
+            }
+        }
+        return stack1.isEmpty();
+    }
+
+    public static double valueExpress(String strings) {
         String[] array = strings.split("");
         String res = "";
         for (int i = 0; i < array.length; i++) {
@@ -14,11 +29,14 @@ public class ValidBracket {
             } else {
                 res += array[i];
             }
+        }   
+        if (!isValid(res)) {
+            return -1;
         }
+
         String[] arrays = res.split(" ");
         Stack<String> stack1 = new Stack<>();
         Stack<Double> stack2 = new Stack<>();
-
         for (int i = 0; i < arrays.length; i++) {
             if (arrays[i].equals("+") || arrays[i].equals("−") || arrays[i].equals("∗") || arrays[i].equals("/")) {
                 stack1.push(arrays[i]);
@@ -55,6 +73,6 @@ public class ValidBracket {
 
     public static void main(String[] args) {
         String s = "(1 + ((2 + 3) ∗ (8 ∗ 5)))";
-        System.out.println(isValid(s));
+        System.out.println(valueExpress(s));
     }
 }

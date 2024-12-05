@@ -5,7 +5,6 @@ import java.util.Stack;
 public class CheckValidBracket {
     public static boolean isValid(String strings) {
         Stack<Character> stack1 = new Stack<>();
-
         for (int i = 0; i < strings.length(); i++) {
             if (strings.charAt(i) == '(') {
                 stack1.push(strings.charAt(i));
@@ -22,7 +21,7 @@ public class CheckValidBracket {
     }
 
     public static void main(String[] args) {
-        String s = "(10−8/((2+5)∗17)";
+        String s = " (10 +8 )/(( 5−2 )∗ 17 ) ";
         System.out.println(isValid(s));
     }
 }

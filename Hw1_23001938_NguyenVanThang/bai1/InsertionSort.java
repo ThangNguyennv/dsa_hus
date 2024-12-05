@@ -26,7 +26,6 @@ public class InsertionSort {
                 pos--;
                 System.out.println();
             }
-            timesCompare++;
             array[pos + 1] = x;
             printArray(array);
             System.out.println();

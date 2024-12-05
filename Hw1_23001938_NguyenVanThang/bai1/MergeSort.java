@@ -37,7 +37,6 @@ public class MergeSort {
             }
             count++;
             timesCompare++;
-            timesSwap++;
             printArray(array);
             System.out.println();
         }
@@ -45,18 +44,14 @@ public class MergeSort {
             array[count] = leftArray[i];
             count++;
             i++;
-            timesSwap++;
         }
         while (j < lengthOfRightArray) {
             array[count] = rightArray[j];
             count++;
             j++;
-            timesSwap++;
         }
         printArray(array);
         System.out.println();
-        System.out.println("times compare is : " + timesCompare);
-        System.out.println("times swap is : " + timesSwap);
     }
 
     public static void mergeSort(int array[], int left, int right) {
@@ -80,5 +75,7 @@ public class MergeSort {
             array[i] = 1 + random.nextInt(100000);
         }
         mergeSort(array, 0, n - 1);
+        System.out.println("times compare is : " + timesCompare);
+        System.out.println("times swap is : " + timesSwap);
     }
 }

@@ -25,9 +25,9 @@ public class LevelOrder {
         Queue<Node> q = new LinkedList<>();
         q.add(root);
         while (!q.isEmpty()) {
-            Node curr = q.poll();arrayList.add(curr.data);
+            Node curr = q.poll();
+            arrayList.add(curr.data);
             if (curr.left != null) {
-
                 q.add(curr.left);
             }
             if (curr.right != null) {

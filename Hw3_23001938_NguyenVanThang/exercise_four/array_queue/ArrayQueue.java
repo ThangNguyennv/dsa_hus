@@ -16,7 +16,7 @@ public class ArrayQueue<E> implements QueueInterface<E> {
 
     public ArrayQueue() {
         n = default_size;
-        queue = (E[]) new Object[default_size];
+        queue = (E[]) new Object[n];
     }
 
     @Override

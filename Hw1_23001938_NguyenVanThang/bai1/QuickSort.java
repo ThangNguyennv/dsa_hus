@@ -16,6 +16,7 @@ public class QuickSort {
         int pivot = array[right];
         int i = left - 1;
         for (int j = left; j < right; j++) {
+            timesCompare++;
             if (array[j] <= pivot) {
                 i++;
                 int temp = array[i];
@@ -23,7 +24,6 @@ public class QuickSort {
                 array[j] = temp;
                 timesSwap++;
             }
-            timesCompare++;
             printArray(array);
             System.out.println();
         }
@@ -34,8 +34,6 @@ public class QuickSort {
         timesSwap++;
         printArray(array);
         System.out.println();
-        System.out.println("times compare is : " + timesCompare);
-        System.out.println("times swap is : " + timesSwap);
         return i;
     }
 
@@ -59,5 +57,7 @@ public class QuickSort {
             array[i] = 1 + random.nextInt(100000);
         }
         quickSort(array, 0, n - 1);
+        System.out.println("times compare is : " + timesCompare);
+        System.out.println("times swap is : " + timesSwap);
     }
 }

@@ -7,8 +7,7 @@ public class TestStack {
         stack.push(5);
         stack.push(2);
         stack.push(100);
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+       
+        System.out.println(stack.top());
     }
 }

@@ -17,6 +17,7 @@ public class ArrayBinaryTree<E, T> implements BinaryTreeInterface<Integer> {
             n++;
         } else {
             System.out.println("Root đã tồn tại!");
+            return;
         }
     }
 
@@ -27,6 +28,7 @@ public class ArrayBinaryTree<E, T> implements BinaryTreeInterface<Integer> {
             n++;
         } else {
             System.out.println("Đã tồn tại node con trái!");
+            return;
         }
     }
 
@@ -37,6 +39,7 @@ public class ArrayBinaryTree<E, T> implements BinaryTreeInterface<Integer> {
             n++;
         } else {
             System.out.println("Đã tồn tại node con phải!");
+            return;
         }
     }
 

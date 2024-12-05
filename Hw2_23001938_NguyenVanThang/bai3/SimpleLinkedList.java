@@ -90,7 +90,7 @@ public class SimpleLinkedList<T> {
             for (int j = 0; j < i; j++) {
                 node = node.next;
             }
-            return node.getData();
+            return node.data;
         }
         return null;
     }

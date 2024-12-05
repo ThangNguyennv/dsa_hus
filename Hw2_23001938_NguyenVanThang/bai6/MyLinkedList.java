@@ -58,7 +58,7 @@ public class MyLinkedList {
                 addAtHead(val);
             } else if (index == n) {
                 addAtTail(val);
-            } else {
+            } else {    
                 Node cur = top;
                 Node prev = null;
                 for (int i = 0; i < index; i++) {
